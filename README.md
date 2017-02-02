@@ -1,5 +1,5 @@
 
-[View slides](https://4326.us/esri/conda-r-ws)
+[View slides](https://4326.us/esri/nyc-r-ws)
 
 Building
 --------
