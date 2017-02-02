@@ -376,6 +376,17 @@ filtered.df <- arc.select(input.fc,
 This creates an _ArcGIS data frame_ -- looks like a data frame, but retains references back to the geometry data.
 
 Access ArcGIS from R {data-background="images/Picture4.jpg"}
+--------------------
+
+Now, if we want to do analysis in R with this spatial data, we need it to be represented as ``sp`` objects. ``arc.data2sp`` does the conversion for us:
+
+```r
+df.as.sp <- arc.data2sp(filtered.df)
+```
+
+``arc.sp2data`` inverts this process, taking ``sp`` objects and generating ArcGIS compatible data frames.
+
+Access ArcGIS from R {data-background="images/Picture4.jpg"}
 ------------------------
 
 Finished with our work in R, want to get the data back to ArcGIS. Write our results back to a new feature class, with ``arc.write``:
@@ -406,20 +417,3 @@ Where Can I Run This? {data-background="images/Picture4.jpg"}
 ---------------------
 
 ![](images/version-block-detailed.png)
-
-Road Ahead {data-background="images/Picture4.jpg"}
-==========
-
-
-Road Ahead: next few months {data-background="images/Picture4.jpg"}
-------------
-
- - Raster
- - [Microsoft R server](https://www.microsoft.com/en-us/cloud-platform/r-server)
- - Data Science VM on Azure &mdash; data science problem solving with R, Python, ArcGIS and much more
-
-Road Ahead: longer term {data-background="images/Picture4.jpg"}
-------------
-
- - Geoprocessing from R &mdash; stay in R for everything
- - ArcGIS API for R

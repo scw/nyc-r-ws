@@ -409,6 +409,11 @@ df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(person,
 <p>This creates an <em>ArcGIS data frame</em> – looks like a data frame, but retains references back to the geometry data.</p>
 </section><section id="access-arcgis-from-r-2" class="slide level2" data-background="images/Picture4.jpg">
 <h2>Access ArcGIS from R</h2>
+<p>Now, if we want to do analysis in R with this spatial data, we need it to be represented as <code>sp</code> objects. <code>arc.data2sp</code> does the conversion for us:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df.as.sp &lt;-<span class="st"> </span><span class="kw">arc.data2sp</span>(filtered.df)</code></pre></div>
+<p><code>arc.sp2data</code> inverts this process, taking <code>sp</code> objects and generating ArcGIS compatible data frames.</p>
+</section><section id="access-arcgis-from-r-3" class="slide level2" data-background="images/Picture4.jpg">
+<h2>Access ArcGIS from R</h2>
 <p>Finished with our work in R, want to get the data back to ArcGIS. Write our results back to a new feature class, with <code>arc.write</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arc.write</span>(<span class="st">&#39;data.gdb/new_features&#39;</span>, results.df)</code></pre></div>
 </section><section id="building-r-script-tools" class="slide level2" data-background="images/Picture4.jpg">
@@ -435,20 +440,6 @@ df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(person,
 <figure>
 <img src="images/version-block-detailed.png" />
 </figure>
-</section></section>
-<section><section id="road-ahead" class="titleslide slide level1" data-background="images/Picture4.jpg"><h1>Road Ahead</h1></section><section id="road-ahead-next-few-months" class="slide level2" data-background="images/Picture4.jpg">
-<h2>Road Ahead: next few months</h2>
-<ul>
-<li>Raster</li>
-<li><a href="https://www.microsoft.com/en-us/cloud-platform/r-server">Microsoft R server</a></li>
-<li>Data Science VM on Azure — data science problem solving with R, Python, ArcGIS and much more</li>
-</ul>
-</section><section id="road-ahead-longer-term" class="slide level2" data-background="images/Picture4.jpg">
-<h2>Road Ahead: longer term</h2>
-<ul>
-<li>Geoprocessing from R — stay in R for everything</li>
-<li>ArcGIS API for R</li>
-</ul>
 </section></section>
     </div>
   </div>
